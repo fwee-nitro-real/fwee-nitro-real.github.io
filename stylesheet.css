@@ -2,6 +2,11 @@ body {
   font-family: "Comic Sans MS", cursive;
 }
 
+*
+{
+text-align: center !important;
+margin: auto !important;
+}
 
 @keyframes rotateAnimation {
   from {
