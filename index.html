@@ -2,9 +2,36 @@
 <html>
 <head>
 <title>fwee nitro :3</title>
-<meta content="fw-fwee niwtwo??? awl fow mwe?? :3333" property="og:title" />
+<meta content="fw-fwee niwtwo??? awl fow mwe?? :3333" property="og:title"/>
+<script type="text/javascript">
+  var clickies = 0;
+  var cwickwy;
+  var img;
+  
+  function clicked() {
+      clickies = clickies + 1
+      console.log(clickies)
+      
+      if (clickies == 20) {
+        cwickwy.innerHTML= ">:("
+      }
+      
+      if (clickies == 22) {
+      	cwickwy.innerHTML = "OKAY FINE, HERE"
+        setTimeout(function() {
+            img.src = "doyouknowahtajpegis.jpeg"
+    }, 5000)};
+  }
+  
+  window.addEventListener('load', function() {
+  	cwickwy = document.getElementById("funny")
+    img = document.getElementById("hehe")
+  })
+
+</script>
 </head>
 <body>
-<p>hi no fwee nitro sorry :(</p>
+<p id="funny" onclick="clicked()">hi no fwee nitro sorry :(</p>
+<img id = "hehe" src="">
 </body>
 </html>
