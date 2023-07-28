@@ -48,9 +48,14 @@ function imgClicked() {
     let str2 = imgClicks.toString();
     cwickwy.innerHTML = str2.concat(str1);
   } else {
-    if (imgClicks === 4) {
+    if (imgClicks === 10000) {
       imgClicks = 10001;
       cwickwy.innerHTML = "i lied :D have a nice day :DD";
+      cwickwy.id = "rotatingElement"
+      document.getElementById("upgrade1").innerHtml="trololololol"
+       document.getElementById("upgrade1").id = "rotatingElement"
+       document.getElementById("upgrade2").innerHtml = "ahahahahahahahahahahahahhah torlllll"
+      document.getElementById("upgrade2").id = "rotatingElement"
       img.src =
         "https://cdn.discordapp.com/attachments/858564403419152424/1134544843750768690/cone.png";
     }
