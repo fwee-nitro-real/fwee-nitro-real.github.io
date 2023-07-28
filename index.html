@@ -2,35 +2,71 @@
 <html>
 <head>
 <title>fwee nitro :3</title>
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
 <meta content="fw-fwee niwtwo??? awl fow mwe?? :3333" property="og:title"/>
 <script type="text/javascript">
-  var clickies = 0;
+  
+  // elements 
   var cwickwy;
   var img;
+  //
   
-  function clicked() {
+  // variables
+  var clickies = 0;
+  var imgClicks = 0;
+  
+  var cooldown = false;
+  var cooldownTime = 500;
+  //
+  
+  function Clicked() {
       clickies = clickies + 1
       
       if (clickies == 20) {
         cwickwy.innerHTML= ">:( stawp.. ... ;3"
       }
       
-      if (clickies == 512) {
-      	cwickwy.innerHTML = "okawy hewe wou gwo :33"
+      if (clickies == 23) {
+          cwickwy.innerHTML = "okawy hewe wou gwo :33"
         setTimeout(function() {
-            img.src = "doyouknowahtajpegis.jpeg"
+            img.src = "https://cdn.discordapp.com/attachments/1126422502445420554/1134537217193283725/doyouknowahtajpegis.png"
     }, 1000)};
   }
+
+function imgClicked() {
+  if (clickies > 22 && cooldown === false && imgClicks < 10000) {
+    console.log(imgClicks);
+    console.log(cooldown);
+    cooldown = true;
+    imgClicks = imgClicks + 1;
+
+    setTimeout(function () {
+      cooldown = false;
+    }, cooldownTime);
+
+    let str1 = " click(s) (get to 10000 clicks for real nitro!!!!!!1111)";
+    let str2 = imgClicks.toString();
+    cwickwy.innerHTML = str2.concat(str1);
+  } else {
+    if (imgClicks === 4) {
+      imgClicks = 10001;
+      cwickwy.innerHTML = "i lied :D have a nice day :DD";
+      img.src =
+        "https://cdn.discordapp.com/attachments/858564403419152424/1134544843750768690/cone.png";
+    }
+  }
+}
   
   window.addEventListener('load', function() {
-  	cwickwy = document.getElementById("funny")
-    img = document.getElementById("hehe")
+      cwickwy = document.getElementById("funny")
+    img = document.getElementById("rotatingElement")
   })
-
 </script>
 </head>
 <body>
-<p id="funny" onclick="clicked()">hi no fwee nitro sorry :(</p>
-<img id = "hehe" src="">
+<p id="funny" onclick="Clicked()">hi no fwee nitro sorry :(</p>
+<img id="rotatingElement" src="" onclick="imgClicked()">
+<p id = "upgrade1"></p>
+<p id = "upgrade2"></p>
 </body>
 </html>
